@@ -362,7 +362,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = twitter;
+				PRODUCT_NAME = BirdWatch;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
