@@ -3,7 +3,7 @@ framework 'Webkit'
 
 class Status
 
-  attr_accessor :index, :loading, :entry, :image
+  attr_accessor :index, :entry, :image
   
   def initialize(entry, index)
     @entry = entry
@@ -11,6 +11,13 @@ class Status
     @loading = false
     @image = NSImage.imageNamed "NSUser"
     @data = NSMutableData.new
+    @url = url entry
+  end
+
+  def url(entry)
+    links = entry.XMLRepresentation.nodesForXPath '//link[@type="image/png"]', error:nil
+    href = links.first.attributeForName("href").stringValue.gsub '_normal.', '_bigger.'
+    NSURL.URLWithString href
   end
 
   def content
@@ -70,15 +77,11 @@ class Status
     puts entry.XMLRepresentation.XMLString
   end
 
-  def href
-    entry.XMLRepresentation.elementsForName('link').last.attributeForName('href').stringValue.gsub '_normal.', '_bigger.'
-  end
-
-  def get(&block)
-    return if loading
-    self.loading = true
+  def download(&block)
+    return if @loading
+    @loading = true
     @block = block
-    request = NSURLRequest.requestWithURL(NSURL.URLWithString(href))
+    request = NSURLRequest.requestWithURL @url
     NSURLConnection.alloc.initWithRequest request, delegate:self
   end
   
@@ -91,12 +94,12 @@ class Status
   end
 
   def connection(connection, didFailWithError:error)
-    self.loading = false
+    @loading = false
   end
   
   def connectionDidFinishLoading(connection)
     @block.call @data
-    self.loading = false
+    @loading = false
   end
 
 end

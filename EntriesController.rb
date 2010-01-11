@@ -20,14 +20,14 @@ class EntriesController
     73
   end
 
-  def tableView(view, willDisplayCell:cell, forTableColumn:column, row:index)
+  def tableView(view, willDisplayCell:cell, forTableColumn:column, row:row)
     case column.identifier
     when "button"
-      if column.dataCellForRow(index).image.name == "NSUser"
-        status = @entries[index]
-        status.get do |data|
+      if cell.image.name == "NSUser"
+        status = @entries[row]
+        status.download do |data|
           status.image = NSImage.alloc.initWithData data
-          view.reloadDataForRowIndexes NSIndexSet.indexSetWithIndex(status.index), columnIndexes:NSIndexSet.indexSetWithIndex(0)
+          view.reloadDataForRowIndexes NSIndexSet.indexSetWithIndex(row), columnIndexes:NSIndexSet.indexSetWithIndex(0)
         end
       end
     when "text"
