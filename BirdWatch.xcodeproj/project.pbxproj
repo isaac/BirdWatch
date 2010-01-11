@@ -36,6 +36,7 @@
 		4DE3BE140D8651D900ECA448 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE3BE130D8651D900ECA448 /* MacRuby.framework */; };
 		6A0430511053850100351A75 /* FeedsController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6A0430501053850100351A75 /* FeedsController.rb */; };
 		6A2C4A7210552FA50077E07A /* EntriesController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6A2C4A7110552FA50077E07A /* EntriesController.rb */; };
+		6A2CFE0210FBC688002B258C /* attributed_string.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6A2CFE0110FBC688002B258C /* attributed_string.rb */; };
 		6A73228C105E414E0031D4ED /* Status.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6A73228B105E414E0031D4ED /* Status.rb */; };
 		6A7324481060794E0031D4ED /* TextFieldCell.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6A7324471060794E0031D4ED /* TextFieldCell.rb */; };
 		6AAC02C21060DAA100324E24 /* EntriesTableView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6AAC02C11060DAA100324E24 /* EntriesTableView.rb */; };
@@ -59,6 +60,7 @@
 		4DE3BE130D8651D900ECA448 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = /Library/Frameworks/MacRuby.framework; sourceTree = "<absolute>"; };
 		6A0430501053850100351A75 /* FeedsController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = FeedsController.rb; sourceTree = "<group>"; };
 		6A2C4A7110552FA50077E07A /* EntriesController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = EntriesController.rb; sourceTree = "<group>"; };
+		6A2CFE0110FBC688002B258C /* attributed_string.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = attributed_string.rb; sourceTree = "<group>"; };
 		6A73228B105E414E0031D4ED /* Status.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Status.rb; sourceTree = "<group>"; };
 		6A7324471060794E0031D4ED /* TextFieldCell.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TextFieldCell.rb; sourceTree = "<group>"; };
 		6AAC02C11060DAA100324E24 /* EntriesTableView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = EntriesTableView.rb; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				6A7324471060794E0031D4ED /* TextFieldCell.rb */,
 				6AAC02C11060DAA100324E24 /* EntriesTableView.rb */,
 				6AE0152910659977005EE332 /* FeedsTableView.rb */,
+				6A2CFE0110FBC688002B258C /* attributed_string.rb */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				6A7324481060794E0031D4ED /* TextFieldCell.rb in Resources */,
 				6AAC02C21060DAA100324E24 /* EntriesTableView.rb in Resources */,
 				6AE0152A10659977005EE332 /* FeedsTableView.rb in Resources */,
+				6A2CFE0210FBC688002B258C /* attributed_string.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

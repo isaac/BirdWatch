@@ -1,5 +1,4 @@
-require 'hotcocoa'
-framework 'Webkit'
+require 'attributed_string'
 
 class Status
 
